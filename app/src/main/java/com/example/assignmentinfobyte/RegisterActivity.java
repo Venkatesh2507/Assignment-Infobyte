@@ -37,6 +37,7 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View view) {
                 email = binding.emailEt.getEditText().getText().toString().trim();
                 password = binding.passwordEt.getEditText().getText().toString().trim();
+                binding.progressBar.setVisibility(View.VISIBLE);
                 validateEmail(email,password);
                 registerUser(email,password);
             }
